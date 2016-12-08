@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ruxing.redis.mapper.UserMapper">
+
+    <sql id="BaseItems">
+        id, name, age, city, create_time, update_time, deleted
+    </sql>
+
+    <select id="findUserById" resultType="ruxing.redis.entity.po.User">
+        SELECT
+            <include refid="BaseItems"/>
+        FROM
+            user
+        WHERE
+            user.id = #{userId}
+        AND deleted = 0
+    </select>
+
+    <insert id="saveUser">
+        INSERT INTO user(name, age, city)
+        VALUE (#{user.name}, #{user.age}, #{user.city})
+    </insert>
+
+</mapper>
