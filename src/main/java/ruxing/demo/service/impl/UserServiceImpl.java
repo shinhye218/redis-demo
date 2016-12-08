@@ -1,10 +1,10 @@
-package ruxing.redis.service.impl;
+package ruxing.demo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ruxing.redis.entity.po.User;
-import ruxing.redis.mapper.UserMapper;
-import ruxing.redis.service.UserService;
+import ruxing.demo.entity.po.User;
+import ruxing.demo.mapper.UserMapper;
+import ruxing.demo.service.UserService;
 
 /**
  * Created by ruxing on 08/12/2016.

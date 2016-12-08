@@ -1,4 +1,4 @@
-package ruxing.redis.entity.po;
+package ruxing.demo.entity.po;
 
 import lombok.Data;
 

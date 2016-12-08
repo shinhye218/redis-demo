@@ -1,6 +1,6 @@
-package ruxing.redis.service;
+package ruxing.demo.service;
 
-import ruxing.redis.entity.po.User;
+import ruxing.demo.entity.po.User;
 
 /**
  * Created by ruxing on 08/12/2016.

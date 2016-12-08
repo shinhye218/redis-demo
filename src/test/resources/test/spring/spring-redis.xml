@@ -6,10 +6,10 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
-        <!--<property name="maxTotal" value="${redis.pool.maxActive}" />-->
-        <!--<property name="maxIdle" value="${redis.pool.maxIdle}" />-->
-        <!--<property name="maxWaitMillis" value="${redis.pool.maxWaitMillis}" />-->
-        <!--<property name="testOnBorrow" value="${redis.pool.testOnBorrow}" />-->
+        <!--<property name="maxTotal" value="${demo.pool.maxActive}" />-->
+        <!--<property name="maxIdle" value="${demo.pool.maxIdle}" />-->
+        <!--<property name="maxWaitMillis" value="${demo.pool.maxWaitMillis}" />-->
+        <!--<property name="testOnBorrow" value="${demo.pool.testOnBorrow}" />-->
     </bean>
 
     <bean id="jedisPool" class="redis.clients.jedis.JedisPool">

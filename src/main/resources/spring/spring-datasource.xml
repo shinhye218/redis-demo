@@ -23,7 +23,7 @@
 
     <!--它将会查找类路径下的映射器并自动将它们创建成MapperFactoryBean-->
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="ruxing.redis.mapper"/>
+        <property name="basePackage" value="ruxing.demo.mapper"/>
         <!--多个DataSource时需要指定sqlSessionFactory-->
         <!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>-->
     </bean>
