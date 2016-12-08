@@ -19,11 +19,11 @@ public class UserAction {
     private UserService userService;
 
     @ResponseBody
-    @RequestMapping(value = "/findUser", method = RequestMethod.GET)
-    public String findUser() {
+    @RequestMapping(value = "/findUser")
+    public Object findUser() {
 
         User user = userService.findUserById(1l);
-        return "success";
+        return user;
     }
 
     @ResponseBody

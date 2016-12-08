@@ -13,6 +13,7 @@
         <property name="locations">
             <list>
                 <value>classpath*:/props/redis.properties</value>
+                <value>classpath*:/props/datasource.properties</value>
             </list>
         </property>
         <property name="ignoreUnresolvablePlaceholders" value="true"/>
