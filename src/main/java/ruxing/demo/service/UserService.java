@@ -16,6 +16,14 @@ public interface UserService {
     User findUserById(Long userId);
 
     /**
+     * 通过Id查询用户(使用缓存)
+     *
+     * @param userId
+     * @return
+     */
+    User findUserByIdWithCache(Long userId);
+
+    /**
      * 添加用户
      *
      * @param user

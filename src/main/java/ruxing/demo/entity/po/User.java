@@ -2,13 +2,16 @@ package ruxing.demo.entity.po;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by ruxing on 08/12/2016.
  */
 @Data
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 1043088843047983374L;
 
     /**
      * 主键

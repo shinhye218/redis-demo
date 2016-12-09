@@ -19,6 +19,10 @@ public class UserServiceImpl implements UserService {
         return userMapper.findUserById(userId);
     }
 
+    public User findUserByIdWithCache(Long userId) {
+        return userMapper.findUserByIdWithCache(userId);
+    }
+
     public Integer addUser(User user) {
         if (user == null) {
             return 0;

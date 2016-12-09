@@ -17,6 +17,14 @@ public interface UserMapper {
     User findUserById(@Param("userId") Long userId);
 
     /**
+     * 通过Id查询用户(使用二级缓存)
+     *
+     * @param userId
+     * @return
+     */
+    User findUserByIdWithCache(@Param("userId") Long userId);
+
+    /**
      * 保持用户
      *
      * @param user
