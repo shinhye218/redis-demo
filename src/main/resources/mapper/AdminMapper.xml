@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ruxing.demo.mapper.AdminMapper">
+
+    <sql id="BaseItems">
+        id, login_name, password, create_time, update_time, deleted
+    </sql>
+
+    <select id="findAdminByLoginName" resultType="ruxing.demo.entity.po.Admin">
+        SELECT
+            <include refid="BaseItems"/>
+        FROM
+            admin
+        WHERE
+        admin.login_name = #{loginName}
+        AND deleted = 0
+    </select>
+
+</mapper>
