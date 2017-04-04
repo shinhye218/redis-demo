@@ -15,6 +15,7 @@
                 /doLogin = anon
                 /error   = anon
                 /favicon.ico = anon
+                /all/** = anon
                 /** = authc
                 <!--/admin/** = authc, roles[admin]-->
                 <!--/docs/** = authc, perms[document:read]-->

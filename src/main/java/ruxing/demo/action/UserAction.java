@@ -23,7 +23,6 @@ public class UserAction {
     @ResponseBody
     @RequestMapping(value = "/findUser")
     public Object findUser() {
-
         User user = userService.findUserById(1l);
         userService.findUserById(1l);
         userService.findUserByIdWithCache(1l);

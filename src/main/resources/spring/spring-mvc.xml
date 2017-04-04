@@ -26,4 +26,11 @@
         <property name="suffix" value=".ftl"/>
     </bean>
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/api/*"/>
+            <bean class="ruxing.demo.core.interceptor.AllInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>

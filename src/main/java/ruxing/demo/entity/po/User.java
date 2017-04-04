@@ -16,7 +16,7 @@ public class User implements Serializable {
     /**
      * 主键
      */
-    private Long id;
+    private Long userId;
 
     /**
      * 名字
@@ -32,6 +32,11 @@ public class User implements Serializable {
      * 城市
      */
     private String city;
+
+    /**
+     * 家乡
+     */
+    private String hometown;
 
     /**
      * 创建时间
