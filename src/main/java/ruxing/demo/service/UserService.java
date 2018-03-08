@@ -31,4 +31,18 @@ public interface UserService {
      */
     Integer addUser(User user);
 
+    /**
+     * 通过用户Id更新用户
+     *
+     * @return
+     */
+    void updateUserTestBanana();
+
+    /**
+     * 通过用户Id更新用户
+     *
+     * @return
+     */
+    void updateUserTestApple();
+
 }

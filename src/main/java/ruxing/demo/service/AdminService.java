@@ -15,4 +15,6 @@ public interface AdminService {
      */
     Admin findAdminByLoginName(String loginName);
 
+    void updateUserTestBanana();
+
 }

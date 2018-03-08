@@ -10,6 +10,8 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import ruxing.demo.service.UserService;
 
+import java.math.BigDecimal;
+
 /**
  * Created by ruxing on 07/12/2016.
  *
@@ -37,6 +39,10 @@ public class XmlTest{
 
     @Test
     public void test() {
+        Double price = 119900d;
+        Long result =  new BigDecimal(price).multiply(new BigDecimal("100")).longValue();
+        System.out.println(result);
+
     }
 
 }

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import ruxing.demo.entity.po.User;
+import ruxing.demo.service.AdminService;
 import ruxing.demo.service.UserService;
 
 /**
@@ -19,6 +20,9 @@ public class UserAction {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private AdminService adminService;
 
     @ResponseBody
     @RequestMapping(value = "/findUser")
@@ -38,6 +42,13 @@ public class UserAction {
         user.setCity("kyoto");
 
         userService.addUser(user);
+        return "success";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/updateUser", method = RequestMethod.GET)
+    public String updateUser() {
+        adminService.updateUserTestBanana();
         return "success";
     }
 

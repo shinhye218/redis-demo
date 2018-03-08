@@ -2,6 +2,8 @@ package ruxing.demo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import ruxing.demo.entity.po.User;
 import ruxing.demo.mapper.UserMapper;
 import ruxing.demo.service.UserService;
@@ -28,6 +30,24 @@ public class UserServiceImpl implements UserService {
             return 0;
         }
         return userMapper.saveUser(user);
+    }
+
+    @Transactional
+    public void updateUserTestBanana() {
+//        userMapper.updateUserTestBanana();
+//        throw new RuntimeException("transactional test");
+        try {
+            updateUserTestApple();
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public void updateUserTestApple() {
+        userMapper.updateUserTestApple();
+        throw new RuntimeException("Apple throw exception");
     }
 
 }

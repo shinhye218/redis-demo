@@ -25,11 +25,28 @@ public interface UserMapper {
     User findUserByIdWithCache(@Param("userId") Long userId);
 
     /**
-     * 保持用户
+     * 保存用户
      *
      * @param user
      * @return
      */
     Integer saveUser(@Param("user") User user);
+
+
+    /**
+     * 通过用户Id更新用户
+     *
+     * @param
+     * @return
+     */
+    Integer updateUserTestBanana();
+
+    /**
+     * 通过用户Id更新用户
+     *
+     * @param
+     * @return
+     */
+    Integer updateUserTestApple();
 
 }

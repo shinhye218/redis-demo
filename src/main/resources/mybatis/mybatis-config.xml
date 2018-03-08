@@ -17,4 +17,10 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
 
+    <plugins>
+        <plugin interceptor="ruxing.demo.core.interceptor.mybatis.MyInterceptor">
+
+        </plugin>
+    </plugins>
+
 </configuration>
